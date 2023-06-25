@@ -1,16 +1,17 @@
 <script setup>
 import { ref } from 'vue'
+let tg = window.Telegram.WebApp.initData;
 
 defineProps({
   msg: String,
 })
-
+const output = tg;
 const count = ref(0)
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
-
+  <h1>Output is {{ output }}</h1>
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
